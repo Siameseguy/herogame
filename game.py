@@ -10,9 +10,9 @@ class Game:
   def setup(self):
     self.new = Character()
     self.monsters = [
-      imp(),
-      goblin(),
-      bandit()
+      Imp(),
+      Goblin(),
+      Bandit()
     ]
 
   def get_Monster(self):
@@ -20,7 +20,9 @@ class Game:
     if self.set_monster != "":
       print("A {} approaches, ready for a fight.".format(self.set_monster))
 
-
+  def __init__(self):
+    self.setup() 
+    self.get_Monster()  
 
 
 Game()
