@@ -2,5 +2,6 @@ import random
 
 from character import Character
 
-class game:
-  self.player = Character()
+class Game(Character):
+  def setup(self):
+    self.player = Character()

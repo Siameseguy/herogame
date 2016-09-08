@@ -1,20 +1,23 @@
 import random
 
+
+
 class Character:
-  hero_array = []
 
-  def get_name(self):
-    self.hero_name = input("What is your heros name?")
-    if self.hero_name != "":
-      self.hero_array.append(self.hero_name)
-      print("You are in the game!")
+  def __init__(self, **stats):
+    self.player_stats = []
 
-    else:
-      self.get_name()
+    #player hp
 
-  def __init__(self, **kwargs):
-    self.get_name()
 
-  def hero_stats(self):
-    print("Hero Name: {}".format(self.hero_array[0]))
+    #generate stats
+    self.player_name = input("What is your heros name? ")
+    self.hp = random.randint(15, 30)
+
+    self.player_stats.append(self.player_name)
+    self.player_stats.append(self.hp)
+  
+
+  def list_stats(self):
+    print("Name: {} \n HP: {} \n".format(self.player_name, self.hp))
     
